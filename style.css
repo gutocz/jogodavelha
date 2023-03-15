@@ -72,10 +72,12 @@ body {
   }
 
   #message-box {
+    display: none;
     background-color: #afafaf;
     border: 2px solid #333;
     padding: 10px;
     color: #333;
   }
+  
   
   

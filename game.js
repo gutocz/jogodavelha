@@ -4,6 +4,7 @@ const board = [
   ["", "", ""],
   ["", "", ""]
 ];
+
 const cells = document.querySelectorAll("td");
 const messageBox = document.querySelector("#message-box");
 
@@ -16,10 +17,12 @@ cells.forEach(cell => {
       if (checkWin()) {
         messageBox.innerHTML = `${currentPlayer} ganhou!`;
         messageBox.classList.add("win-message");
+        messageBox.style.display = "block";
         resetGame();
       } else if (checkTie()) {
         messageBox.innerHTML = "Empate!";
         messageBox.classList.add("tie-message");
+        messageBox.style.display = "block";
         resetGame();
       } else {
         currentPlayer = currentPlayer === "X" ? "O" : "X";
